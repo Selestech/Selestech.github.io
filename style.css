@@ -1,0 +1,236 @@
+/* ---------------- Import Google Fonts ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@600&display=swap');
+
+/* ---------------- Base ---------------- */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+a {
+  color: #044971;
+  text-decoration: none;
+}
+
+h1, h2 {
+  color: #044971;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+/* ---------------- Header ---------------- */
+header {
+  background: linear-gradient(45deg, #F3EFEB, #C2AA93);
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.selestech-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00c3ff, #7c00ff, #00c3ff);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s infinite ease-in-out;
+  margin: 2rem 0 1rem 0;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200%; }
+  50% { background-position: 200%; }
+  100% { background-position: -200%; }
+}
+
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ---------------- Navigation ---------------- */
+nav a {
+  color: #000;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- Sections ---------------- */
+section {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #044771;
+  margin-bottom: 15px;
+}
+
+section h3 {
+  font-size: 24px;
+  color: #5F1A77;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+section p,
+section ul {
+  color: #616161;
+  text-align: center;
+}
+
+section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section ul li {
+  margin-bottom: 10px;
+}
+
+/* ---------------- Engagements (✅ list) ---------------- */
+.engagements {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.engagements li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.engagements li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ---------------- Table ---------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #044971;
+  color: white;
+}
+
+/* ---------------- Formulaire de contact ---------------- */
+form {
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* ---------------- Bouton ---------------- */
+.button,
+form button {
+  display: inline-block;
+  background-color: #044771;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  min-width: 200px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover,
+form button:hover {
+  background-color: #033c5e;
+}
+
+/* ---------------- Footer ---------------- */
+footer {
+  text-align: center;
+  margin-top: auto;
+  background: linear-gradient(20deg, #F3EFEB, #C2AA93);
+  padding: 1rem 0;
+}
+
+footer a {
+  color: #044971;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
